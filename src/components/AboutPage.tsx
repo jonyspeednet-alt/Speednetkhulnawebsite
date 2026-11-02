@@ -23,7 +23,7 @@ export default function AboutPage({ onNavigateHome, onExplorePackages, onContact
   const milestones = [
     { year: '2015', title: 'Founded in Khulna', desc: 'Started with a primary optical core at Gagan Babu Road to provide Khulna with reliable, continuous high-speed broadband.' },
     { year: '2018', title: 'Suburban Expansion', desc: 'Extended underground & overhead fusion-spliced optical rings to Sonadanga, Boyra, Khalishpur, and Gollamari.' },
-    { year: '2021', title: '10G Local CDN & BDIX', desc: 'Deployed direct 10G peering with Bangladesh Internet Exchange (BDIX), Google, Netflix, and local gigabit FTP media caches.' },
+    { year: '2021', title: '10G Local CDN & Cloud Edge', desc: 'Deployed direct 10G peering with global CDN nodes, Google, Netflix, and local high-speed media caches.' },
     { year: '2024+', title: 'Division-Wide Backbone', desc: 'Operating 12 interconnected regional hubs spanning Khulna Division with 99.98% core availability.' },
   ];
 
@@ -199,7 +199,7 @@ export default function AboutPage({ onNavigateHome, onExplorePackages, onContact
 
               <div className="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
                 <p>
-                  Our primary Network Operations Center (NOC) is situated at 83/3 Gagan Babu Road, Khulna, linked via multi-strand armored optical fiber cables directly to National Internet Exchange (NIX) and international gateways in Dhaka and Cox's Bazar.
+                  Our primary Network Operations Center (NOC) is situated at 83/3 Gagon Babu Road (Ground Floor & 1st Floor), Khulna, linked via multi-strand armored optical fiber cables directly to National Internet Exchanges and international gateways.
                 </p>
                 <p>
                   Every regional hub operates with dedicated backup generator power, industrial UPS banks, and automated failover routing to maintain connectivity even during municipal grid interruptions.
@@ -209,7 +209,7 @@ export default function AboutPage({ onNavigateHome, onExplorePackages, onContact
               <div className="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">
                 <div className="text-xs text-slate-400 uppercase font-semibold">Core Peering Partnerships</div>
                 <div className="flex flex-wrap gap-2 text-xs font-mono font-bold">
-                  <span className="px-2.5 py-1 rounded-lg bg-slate-800 text-orange-300">BDIX</span>
+                  <span className="px-2.5 py-1 rounded-lg bg-slate-800 text-orange-300">Tier-1 Optical</span>
                   <span className="px-2.5 py-1 rounded-lg bg-slate-800 text-white">Google Edge</span>
                   <span className="px-2.5 py-1 rounded-lg bg-slate-800 text-white">Akamai CDN</span>
                   <span className="px-2.5 py-1 rounded-lg bg-slate-800 text-white">Netflix Open Connect</span>

@@ -115,7 +115,7 @@ export default function Hero({
 
             {/* Sub-headline */}
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl font-normal font-body">
-              Empowering Khulna homes and enterprises with unmetered 4K streaming, zero-lag competitive gaming, and dedicated 100+ Mbps local BDIX & FTP content cache since 2015.
+              Empowering Khulna homes and enterprises with unmetered 4K streaming, zero-lag competitive gaming, and dedicated 100+ Mbps local optical media cache since 2015.
             </p>
 
             {/* Core Pillars */}
@@ -127,7 +127,7 @@ export default function Hero({
 
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-slate-800 text-xs sm:text-sm font-semibold shadow-xs">
                 <Server className="w-4 h-4 text-orange-600 shrink-0" />
-                <span>100+ Mbps FTP Mirror</span>
+                <span>100+ Mbps Optical Cloud</span>
               </div>
 
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-slate-800 text-xs sm:text-sm font-semibold shadow-xs">

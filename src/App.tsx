@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ServicesSection from './components/ServicesSection';
@@ -9,6 +8,7 @@ import CoverageMapSection from './components/CoverageMapSection';
 import BookingFormSection from './components/BookingFormSection';
 import AboutPage from './components/AboutPage';
 import CareerPage from './components/CareerPage';
+import EliteMembershipModal from './components/EliteMembershipModal';
 import SpeedNetChatbot from './components/SpeedNetChatbot';
 import Footer from './components/Footer';
 import { PackageItem } from './types';
@@ -18,6 +18,7 @@ export default function App() {
   const [selectedPackage, setSelectedPackage] = useState<PackageItem | null>(null);
   const [selectedArea, setSelectedArea] = useState<string>('');
   const [selectedServiceName, setSelectedServiceName] = useState<string>('');
+  const [isEliteModalOpen, setIsEliteModalOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const el = document.getElementById(sectionId);
@@ -62,12 +63,10 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-display selection:bg-orange-500 selection:text-white flex flex-col">
-      {/* 1. Top Bar */}
-      <TopBar />
-
-      {/* 2. Sticky Header / Navigation */}
+      {/* Sticky Header / Navigation with Glass Blur & Elite VIP + Career links */}
       <Navbar 
-        onBookClick={handleBookClick} 
+        onBookClick={handleBookClick}
+        onOpenEliteModal={() => setIsEliteModalOpen(true)}
         currentPage={currentPage}
         onNavigatePage={handleNavigatePage}
       />
@@ -76,26 +75,26 @@ export default function App() {
       <main className="flex-grow">
         {currentPage === 'home' && (
           <>
-            {/* 3. Hero Section with Live Package Rotator */}
+            {/* Hero Section with Live Package Rotator */}
             <Hero
               onExplorePackages={() => scrollToSection('packages')}
               onApplyConnection={handleBookClick}
               onSelectPackage={handleSelectPackage}
             />
 
-            {/* 4. Packages & Pricing Section (with Rainbow Waving Outline and simplified Speed & Price) */}
+            {/* Packages & Pricing Section: Portrait Cards with Glass Blur UI */}
             <PackagesSection onSelectPackage={handleSelectPackage} />
 
-            {/* 5. Professional Services Section */}
+            {/* Professional Services Section */}
             <ServicesSection onSelectService={handleSelectService} />
 
-            {/* 6. Connected Optical Line Coverage Map Section with Support & Customer Care Desks */}
+            {/* Connected Optical Line Coverage Map Section centered on SpeedNet NOC 83/3 Gagon Babu Road & Branches */}
             <CoverageMapSection onSelectArea={handleAreaSelected} />
 
-            {/* 7. Branch Offices Section */}
+            {/* Official Branch Offices Section (SpeedNet NOC, Sonadanga, Gollamari, Boyra) */}
             <OfficesSection />
 
-            {/* 8. Lead Capture Booking Form & FAQ */}
+            {/* Lead Capture Booking Form & FAQ */}
             <BookingFormSection
               selectedPackage={selectedPackage}
               selectedArea={selectedArea}
@@ -121,6 +120,13 @@ export default function App() {
 
       {/* Footer */}
       <Footer onNavigatePage={handleNavigatePage} />
+
+      {/* Elite Membership Modal */}
+      <EliteMembershipModal
+        isOpen={isEliteModalOpen}
+        onClose={() => setIsEliteModalOpen(false)}
+        onBookConnection={handleBookClick}
+      />
 
       {/* SpeedNet Bangla Smart Support Chatbot (Assistant) */}
       <SpeedNetChatbot

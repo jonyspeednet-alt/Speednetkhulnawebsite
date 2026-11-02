@@ -67,7 +67,7 @@ export default function Footer({ onNavigatePage }: FooterProps) {
               <div>
                 <div className="text-xs text-slate-400 font-medium">Central NOC & Headquarters</div>
                 <div className="text-sm font-bold text-white">
-                  83/3, Gagan Babu Road, Khulna
+                  83/3, Gagon Babu Road (Ground Floor & 1st Floor), Khulna
                 </div>
               </div>
             </div>
@@ -238,23 +238,20 @@ export default function Footer({ onNavigatePage }: FooterProps) {
           {/* Khulna Branches */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-sm font-bold text-white uppercase tracking-wider">
-              Support Desks
+              Official Branch Desks
             </h4>
             <div className="space-y-2 text-xs text-slate-400">
               <div>
-                <strong className="text-slate-200">Central NOC Technical Desk:</strong> Gagan Babu Road (01910 365533)
+                <strong className="text-slate-200">SpeedNet NOC (Headquarters):</strong> 83/3 Gagon Babu Road, Ground & 1st Floor (01910 365533)
               </div>
               <div>
-                <strong className="text-slate-200">Corporate & Sales Desk:</strong> KDA Approach Road (09639333111)
+                <strong className="text-slate-200">Sonadanga Branch:</strong> Main Road, Sonadanga Residential Area (01910 384433)
               </div>
               <div>
-                <strong className="text-slate-200">Sonadanga Customer Care:</strong> Residential Moor (01910 384433)
+                <strong className="text-slate-200">Gollamari Branch:</strong> Sohan Mansion, Mohammad Nagar (01970 365500)
               </div>
               <div>
-                <strong className="text-slate-200">Gollamari Customer Support:</strong> Sohan Mansion (01970 365500)
-              </div>
-              <div>
-                <strong className="text-slate-200">Boyra & Khalishpur Desk:</strong> Haque Tower (01970 365511)
+                <strong className="text-slate-200">Boyra Branch:</strong> Haque Tower, Mujgunni Main Road (01970 365511)
               </div>
             </div>
           </div>

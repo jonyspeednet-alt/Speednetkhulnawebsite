@@ -37,7 +37,7 @@ export default function SpeedNetChatbot({
     {
       id: 'welcome-1',
       sender: 'assistant',
-      text: "আসসালামু আলাইকুম! স্পিড নেট অ্যাসিস্ট্যান্ট (Assistant)-এ আপনাকে স্বাগতম।\n\nআমি আপনাকে বিল পরিশোধ, নতুন ফাইবার লাইন গ্রহণ, লাইভ এফটিপি ও মুভি সার্ভার লিংক, আপনার এলাকার এরিয়া ম্যানেজার ও শাখা অফিসের কাস্টমার কেয়ার সংক্রান্ত সার্বিক তথ্য দিয়ে সাহায্য করতে পারি।",
+      text: "আসসালামু আলাইকুম! স্পিড নেট অ্যাসিস্ট্যান্ট (Assistant)-এ আপনাকে স্বাগতম।\n\nআমি আপনাকে বিল পরিশোধ, নতুন ফাইবার লাইন গ্রহণ, বাফারলেস ৪K স্ট্রিমিং ও মিডিয়া হাব, আপনার এলাকার এরিয়া ম্যানেজার ও শাখা অফিসের কাস্টমার কেয়ার সংক্রান্ত সার্বিক তথ্য দিয়ে সাহায্য করতে পারি।",
       timestamp: new Date().toLocaleTimeString('bn-BD', { hour: '2-digit', minute: '2-digit' })
     }
   ]);
@@ -58,7 +58,7 @@ export default function SpeedNetChatbot({
   const quickActionChips = [
     { label: '💳 বিল পে করার নিয়ম', query: 'bill' },
     { label: '🔌 নতুন কানেকশন কীভাবে নিব?', query: 'connection' },
-    { label: '🎬 FTP সার্ভার লিংক', query: 'ftp' },
+    { label: '🎬 ৪K বিনোদন ও ক্লাউড', query: 'entertainment' },
     { label: '📍 এলাকার ম্যানেজার ও নম্বর', query: 'area_list' },
     { label: '📦 ইন্টারনেট প্যাকেজসমূহ', query: 'packages' },
     { label: '🏢 শাখা অফিসের সাপোর্ট নম্বর', query: 'offices' },
@@ -112,13 +112,13 @@ export default function SpeedNetChatbot({
       };
     }
 
-    // 3. FTP সার্ভার লিংক (FTP Server Links)
-    if (q.includes('ftp') || q.includes('এফটিপি') || q.includes('মুভি') || q.includes('ডাউনলোড') || q.includes('সার্ভার') || q.includes('movie') || q.includes('link') || q.includes('লিংক')) {
+    // 3. ৪K বিনোদন ও ক্লাউড হাব (4K Entertainment & Cloud Hub)
+    if (q.includes('entertainment') || q.includes('মুভি') || q.includes('বিনোদন') || q.includes('ডাউনলোড') || q.includes('সার্ভার') || q.includes('movie') || q.includes('link') || q.includes('লিংক') || q.includes('tv') || q.includes('টিভি')) {
       return {
-        text: `🎬 স্পিড নেট লাইভ হাই-স্পিড FTP সার্ভার লিংক:\n\nআমাদের ফাইবার নেটওয়ার্কে ১০০+ Mbps থেকে গিগাবিট ফুল স্পিডে বাফারিং ছাড়া ডাউনলোড ও লাইভ স্ট্রিমিং উপভোগ করুন:\n\n১. 4K Media Hub (10.16.100.10)\nসর্বশেষ 4K HDR মুভি, বাংলা, হিন্দি ও ইংলিশ ড্রামা সিরিজ।\n\n২. Circle FTP & Software Mirror\nলেটেস্ট পিসি গেমস, সফটওয়্যার, উইন্ডোজ/লিনাক্স আইএসও ও প্যাচ।\n\n৩. Speed Net Live TV & Sports Cache\n১০০+ লাইভ টিভি চ্যানেল ও সরাসরি খেলাধুলা।`,
+        text: `🎬 স্পিড নেট লাইভ হাই-স্পিড ৪K মিডিয়া হাব ও ক্লাউড ক্যাশ:\n\nআমাদের ফাইবার নেটওয়ার্কে ১০০+ Mbps থেকে গিগাবিট ফুল স্পিডে বাফারিং ছাড়া ডাউনলোড ও লাইভ স্ট্রিমিং উপভোগ করুন:\n\n১. 4K Media Hub (10.16.100.10)\nসর্বশেষ 4K HDR মুভি, বাংলা, হিন্দি ও ইংলিশ ড্রামা সিরিজ।\n\n২. SpeedNet Cloud Software Mirror\nলেটেস্ট পিসি গেমস, সফটওয়্যার, উইন্ডোজ/লিনাক্স আইএসও ও প্যাচ।\n\n৩. Speed Net Live TV & Sports Cache\n১০০+ লাইভ টিভি চ্যানেল ও সরাসরি খেলাধুলা।`,
         links: [
           { title: '🎬 4K Media Hub (10.16.100.10)', url: 'http://10.16.100.10' },
-          { title: '🎮 Circle FTP Games & Software', url: 'http://circleftp.net' },
+          { title: '🎮 SpeedNet Cloud Mirror', url: 'http://cloud.speednetbd.com' },
           { title: '📺 Speed Net Live TV', url: 'http://tv.speednetbd.com' }
         ]
       };
@@ -173,7 +173,7 @@ export default function SpeedNetChatbot({
     if (q.includes('package') || q.includes('প্যাকেজ') || q.includes('speed') || q.includes('স্পিড') || q.includes('দাম') || q.includes('খরচ') || q.includes('রেট') || q.includes('price')) {
       const pkgList = ISP_PACKAGES.map(p => `• ${p.name}: ${p.speed} Mbps — ৳${p.price}/মাস (ভ্যাটসহ)`).join('\n');
       return {
-        text: `📦 স্পিড নেট আনলিমিটেড ফাইবার ব্রডব্যান্ড প্যাকেজ তালিকা:\n\n${pkgList}\n\n✨ কোনো ডেটা লিমিটেশন নেই, আনলিমিটেড ৪K স্ট্রিমিং ও ১০০+ Mbps এফটিপি স্পিড অন্তর্ভুক্ত।\n⭐ সর্বাধিক জনপ্রিয়: Turbo 80 (৮০ Mbps - ৳৭৮৫/মাস)।`,
+        text: `📦 স্পিড নেট আনলিমিটেড ফাইবার ব্রডব্যান্ড প্যাকেজ তালিকা:\n\n${pkgList}\n\n✨ কোনো ডেটা লিমিটেশন নেই, আনলিমিটেড ৪K স্ট্রিমিং ও ১০০+ Mbps অপটিক্যাল ক্যাশ অন্তর্ভুক্ত।\n⭐ সর্বাধিক জনপ্রিয়: Turbo 80 (৮০ Mbps - ৳৭৮৫/মাস)।`,
         suggestedAction: {
           type: 'selectPackage',
           label: 'জনপ্রিয় Turbo 80 প্যাকেজটি বুক করুন',
@@ -192,7 +192,7 @@ export default function SpeedNetChatbot({
 
     // Default Fallback Response
     return {
-      text: `আমি স্পিড নেটের সহকারী (Assistant)। আমি আপনাকে নিচের বিষয়গুলোতে সাহায্য করতে পারি:\n\n১. বিল পরিশোধের সঠিক নিয়ম (বিকাশ/নগদ/রকেট)\n২. নতুন ফাইবার কানেকশন নেওয়ার পদ্ধতি ও কাগজপত্র\n৩. হাই-স্পিড FTP সার্ভার লিংক\n৪. আপনার এলাকার এরিয়া ম্যানেজারের নাম ও সরাসরি মোবাইল নম্বর\n৫. ইন্টারনেট প্যাকেজ ও মাসিক ফি\n৬. খুলনার শাখা অফিসগুলোর ঠিকানা ও কাস্টমার কেয়ার নম্বর\n\nআপনি কী বিষয়ে জানতে চান নিচে মেসেজ লিখুন।`
+      text: `আমি স্পিড নেটের সহকারী (Assistant)। আমি আপনাকে নিচের বিষয়গুলোতে সাহায্য করতে পারি:\n\n১. বিল পরিশোধের সঠিক নিয়ম (বিকাশ/নগদ/রকেট)\n২. নতুন ফাইবার কানেকশন নেওয়ার পদ্ধতি ও কাগজপত্র\n৩. হাই-স্পিড ৪K মিডিয়া ও ক্লাউড লিংক\n৪. আপনার এলাকার এরিয়া ম্যানেজারের নাম ও সরাসরি মোবাইল নম্বর\n৫. ইন্টারনেট প্যাকেজ ও মাসিক ফি\n৬. খুলনার শাখা অফিসগুলোর ঠিকানা ও কাস্টমার কেয়ার নম্বর\n\nআপনি কী বিষয়ে জানতে চান নিচে মেসেজ লিখুন।`
     };
   };
 
@@ -555,7 +555,7 @@ export default function SpeedNetChatbot({
             >
               <input
                 type="text"
-                placeholder="বিল, নতুন সংযোগ, এফটিপি বা আপনার এলাকা লিখুন..."
+                placeholder="বিল, নতুন সংযোগ, প্যাকেজ বা আপনার এলাকা লিখুন..."
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 className="flex-1 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-xs sm:text-sm text-white outline-none transition-all placeholder-slate-400"

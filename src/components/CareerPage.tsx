@@ -79,7 +79,7 @@ export default function CareerPage({ onNavigateHome }: CareerPageProps) {
       type: 'Full-time (Rotational Shift)',
       experience: '1-3 Years in ISP Network Support',
       salary: 'Negotiable based on experience',
-      description: 'Monitor SpeedNet backbone routers, BDIX peering links, and subscriber OLTs. Resolve Layer 2/3 network incidents and provide technical escalation support.',
+      description: 'Monitor SpeedNet backbone routers, optical peering links, and subscriber OLTs. Resolve Layer 2/3 network incidents and provide technical escalation support.',
       responsibilities: [
         'Proactively monitor core routers, switches, and GPON OLT infrastructure via Zabbix & Grafana',
         'Diagnose PPPoE authentication, IP routing, and DNS configuration issues',
