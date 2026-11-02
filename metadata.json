@@ -1,0 +1,8 @@
+{
+  "name": "Remix Speed Net - Khulna\u0027s Pioneer Broadband",
+  "description": "Modern, high-performance, and responsive website for Speed Net - Khulna\u0027s pioneer high-speed broadband ISP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
